@@ -46,8 +46,40 @@ Contributed by [theJayTea](https://github.com/theJayTea) | [Repo](https://github
 </details>
 
 <details>
-  <summary>Mac (new method - no custom shortcut required)</summary>
+  <summary>Mac (recommended - no custom shortcut required)</summary>
 
-Not implemented yet. Contribute by creating a pull request.
+Run the following command in the Terminal
+
+```bash
+curl -fsSL "https://raw.githubusercontent.com/lifeisnphard/complexity/nxt/perplexity/extension/docs/scripts/comet-policy-patch-macos.sh" | bash
+```
+
+<div style="color: orange;font-size: 1.1rem;font-weight: bold;">⚠️ After running the command, RESTART the browser or log out and log back in.</div>
+
+This method creates a background LaunchAgent that automatically patches Comet to allow extensions. No custom shortcut needed - just launch Comet normally!
+
+**How it works:**
+- Creates a LaunchAgent that runs on login
+- Monitors and patches the Local State file automatically
+- Works in the background without any user intervention
+
+**To uninstall:** Run `bash ~/Library/Application\ Support/Complexity/uninstall-comet-patcher.sh`
+
+</details>
+
+<details>
+  <summary>Mac (old method - starting the browser requires a custom shortcut)</summary>
+
+Run the following command in the Terminal
+
+```bash
+curl -fsSL "https://raw.githubusercontent.com/theJayTea/Comet-Patcher-to-Unblock-Perplexity-Extensions/main/comet-patch-macos.sh" | bash
+```
+
+<div style="color: orange;font-size: 1.1rem;font-weight: bold;">⚠️ After running the command, RESTART the browser.</div>
+
+A shortcut named `Comet - CPLX` will be created at `~/Applications/Comet - CPLX.app`. Comet launched through this shortcut will have all extensions enabled on perplexity.ai domains.
+
+Contributed by [theJayTea](https://github.com/theJayTea) | [Repo](https://github.com/theJayTea/Comet-Patcher-to-Unblock-Perplexity-Extensions)
 
 </details>
