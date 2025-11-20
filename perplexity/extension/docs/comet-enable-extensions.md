@@ -48,6 +48,18 @@ Contributed by [theJayTea](https://github.com/theJayTea) | [Repo](https://github
 <details>
   <summary>Mac (new method - no custom shortcut required)</summary>
 
-Not implemented yet. Contribute by creating a pull request.
+Run the following command in the Terminal
+
+```bash
+defaults write org.chromium.Chromium ExtensionSettings '{"*":{"runtime_allowed_hosts":["*://*.perplexity.ai"],"runtime_blocked_hosts":[]}}'
+```
+
+<div style="color: orange;font-size: 1.1rem;font-weight: bold;">⚠️ After running the command, RESTART the browser.</div>
+
+Alternatively, you can download and run the script from the repository:
+
+```bash
+curl -fsSL "https://raw.githubusercontent.com/pnd280/complexity/nxt/perplexity/extension/scripts/comet-policy-patch-macos.sh" | bash
+```
 
 </details>
